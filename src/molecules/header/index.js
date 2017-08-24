@@ -1,6 +1,10 @@
 import React from 'react';
-import {AppBar} from 'material-ui';
+import {AppBar, Toolbar} from 'material-ui';
 
 export default function () {
-  return <AppBar />;
+  return (
+    <AppBar>
+      <Toolbar />
+    </AppBar>
+  );
 }
