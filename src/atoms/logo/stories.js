@@ -1,8 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import Header from './index';
+import Logo from './index';
 
-storiesOf('Molecules/Header', module).add('default', () => (
-  <Header />
-));
+storiesOf('Atoms/Logo', module).add('default', () => <Logo />);

@@ -1,10 +1,13 @@
 import React from 'react';
-import {AppBar, Toolbar} from 'material-ui';
+import {AppBar, Toolbar, Typography} from 'material-ui';
+import Logo from '../../atoms/logo';
 
 export default function Header() {
   return (
     <AppBar>
-      <Toolbar />
+      <Toolbar>
+        <Typography type="headline"><Logo /></Typography>
+      </Toolbar>
     </AppBar>
   );
 }
