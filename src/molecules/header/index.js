@@ -4,7 +4,7 @@ import Logo from '../../atoms/logo';
 
 export default function Header() {
   return (
-    <AppBar>
+    <AppBar position="static">
       <Toolbar>
         <Typography type="headline"><Logo /></Typography>
       </Toolbar>
