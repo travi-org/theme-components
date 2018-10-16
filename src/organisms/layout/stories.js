@@ -5,4 +5,8 @@ import Layout from './index';
 
 storiesOf('Organisms/Layout', module)
   .add('default', () => <Layout />)
-  .add('w/ child content', () => <Layout>Child Content</Layout>);
+  .add('w/ child content', () => (
+    <Layout>
+      Child Content
+    </Layout>
+  ));

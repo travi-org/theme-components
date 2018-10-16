@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography type="headline"><Logo /></Typography>
+        <Typography type="headline">
+          <Logo />
+        </Typography>
       </Toolbar>
     </AppBar>
   );

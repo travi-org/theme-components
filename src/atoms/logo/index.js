@@ -7,7 +7,11 @@ const styles = {
 };
 
 export default function Logo() {
-  return <span style={styles}>Travi</span>;
+  return (
+    <span style={styles}>
+      Travi
+    </span>
+  );
 }
 
 Logo.displayName = 'Logo';
