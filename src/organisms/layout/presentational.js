@@ -1,12 +1,12 @@
 import React from 'react';
 import {node} from 'prop-types';
-import {Reboot} from 'material-ui';
+import {CssBaseline} from '@material-ui/core';
 import Header from '../../molecules/header';
 
 export default function Layout({children}) {
   return (
     <div>
-      <Reboot />
+      <CssBaseline />
       <Header />
       {children}
     </div>
