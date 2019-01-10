@@ -1,15 +1,16 @@
 import React from 'react';
 import {node} from 'prop-types';
-import {CssBaseline} from '@material-ui/core';
+import {CssBaseline, MuiThemeProvider} from '@material-ui/core';
 import Header from '../../molecules/header';
+import {theme} from '../..';
 
 export default function Layout({children}) {
   return (
-    <div>
+    <MuiThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
       {children}
-    </div>
+    </MuiThemeProvider>
   );
 }
 

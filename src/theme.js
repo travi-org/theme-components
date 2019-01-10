@@ -2,6 +2,9 @@ import {createMuiTheme} from '@material-ui/core';
 
 // palette generated at http://mcg.mbitson.com/ from #c80000
 export default createMuiTheme({
+  typography: {
+    useNextVariants: true
+  },
   palette: {
     primary: {
       50: '#f8e0e0',
