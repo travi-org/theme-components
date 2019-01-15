@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography type="headline">
+        <Typography variant="headline">
           <Logo />
         </Typography>
       </Toolbar>
