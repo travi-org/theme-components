@@ -9,7 +9,9 @@ export default function Layout({children}) {
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      {children}
+      <section>
+        {children}
+      </section>
     </MuiThemeProvider>
   );
 }
