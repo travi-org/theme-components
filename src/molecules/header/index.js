@@ -7,7 +7,9 @@ export default function Header() {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="headline">
-          <Logo />
+          <a href="https://matt.travi.org" css={{textDecoration: 'none'}}>
+            <Logo />
+          </a>
         </Typography>
       </Toolbar>
     </AppBar>
