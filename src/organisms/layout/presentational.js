@@ -1,14 +1,14 @@
 import React from 'react';
-import {node} from 'prop-types';
+import {func, node} from 'prop-types';
 import {CssBaseline, MuiThemeProvider} from '@material-ui/core';
 import Header from '../../molecules/header';
 import {theme} from '../..';
 
-export default function Layout({children}) {
+export default function Layout({children, onNavigationDrawerToggle}) {
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <Header />
+      <Header onNavigationDrawerToggle={onNavigationDrawerToggle} />
       <section>
         {children}
       </section>
@@ -17,5 +17,6 @@ export default function Layout({children}) {
 }
 
 Layout.propTypes = {
-  children: node
+  children: node.isRequired,
+  onNavigationDrawerToggle: func.isRequired
 };
