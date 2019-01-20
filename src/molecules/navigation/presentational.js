@@ -1,12 +1,21 @@
 import React from 'react';
-import {bool, func} from 'prop-types';
-import {Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
-import {ChevronRight, Home, Dvr} from '@material-ui/icons';
+import {bool, func, shape, string} from 'prop-types';
+import {Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, withStyles} from '@material-ui/core';
+import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
+import {drawerWidth, styles} from './styles';
 
-export default function NavigationDrawer({open, onToggle}) {
+export function NavigationDrawer({open, onToggle, classes}) {
   return (
-    <Drawer variant="persistent" anchor="left" open={open}>
-      <IconButton onClick={onToggle}><ChevronRight /></IconButton>
+    <Drawer
+      variant="persistent"
+      anchor="left"
+      open={open}
+      css={{width: drawerWidth, flexShrink: 0}}
+      classes={{paper: classes.paper}}
+    >
+      <div className={classes.drawerHeader}>
+        <IconButton onClick={onToggle}><ChevronLeft /></IconButton>
+      </div>
       <Divider />
       <nav>
         <List>
@@ -26,5 +35,9 @@ export default function NavigationDrawer({open, onToggle}) {
 
 NavigationDrawer.propTypes = {
   open: bool,
-  onToggle: func.isRequired
+  onToggle: func.isRequired,
+  classes: shape({paper: string, drawerHeader: string})
 };
+NavigationDrawer.defaultProps = {classes: {}};
+
+export default withStyles(styles, {withTheme: true})(NavigationDrawer);
