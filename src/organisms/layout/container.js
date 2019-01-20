@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {node} from 'prop-types';
-import Layout from './presentational';
+import LayoutPresentational from './presentational';
 
 export default class LayoutContainer extends Component {
   state = {navigationOpen: false};
@@ -16,9 +16,9 @@ export default class LayoutContainer extends Component {
     const {navigationOpen} = this.state;
 
     return (
-      <Layout navigationOpen={navigationOpen} onNavigationDrawerToggle={this.navigationToggleHandler}>
+      <LayoutPresentational navigationOpen={navigationOpen} onNavigationDrawerToggle={this.navigationToggleHandler}>
         {children}
-      </Layout>
+      </LayoutPresentational>
     );
   }
 }
