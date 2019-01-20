@@ -2,6 +2,7 @@ import React from 'react';
 import {bool, func, shape, string} from 'prop-types';
 import {AppBar, IconButton, Toolbar, Typography, withStyles} from '@material-ui/core';
 import {Menu as MenuIcon} from '@material-ui/icons';
+import travi from 'travi';
 import classNames from 'classnames';
 import Logo from '../../atoms/logo';
 import {drawerWidth} from '../navigation/styles';
@@ -40,7 +41,7 @@ export function Header({navigationOpen, onNavigationDrawerToggle, classes}) {
           </IconButton>
         )}
         <Typography component="h1" variant="h5">
-          <a href="https://matt.travi.org" css={{textDecoration: 'none'}}>
+          <a href={travi.contact.website} css={{textDecoration: 'none'}}>
             <Logo />
           </a>
         </Typography>

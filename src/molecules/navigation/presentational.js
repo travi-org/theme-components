@@ -2,6 +2,7 @@ import React from 'react';
 import {bool, func, shape, string} from 'prop-types';
 import {Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, withStyles} from '@material-ui/core';
 import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
+import travi from 'travi';
 import {drawerWidth, styles} from './styles';
 
 export function NavigationDrawer({open, onToggle, classes}) {
@@ -19,11 +20,11 @@ export function NavigationDrawer({open, onToggle, classes}) {
       <Divider />
       <nav>
         <List>
-          <ListItem button>
+          <ListItem button component="a" href={travi.contact.website}>
             <ListItemIcon><Home /></ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button>
+          <ListItem button component="a" href="https://presentations.travi.org">
             <ListItemIcon><Dvr /></ListItemIcon>
             <ListItemText primary="Presentations" />
           </ListItem>
