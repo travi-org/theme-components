@@ -18,18 +18,16 @@ export function NavigationDrawer({open, onToggle, classes}) {
         <IconButton onClick={onToggle}><ChevronLeft /></IconButton>
       </div>
       <Divider />
-      <nav>
-        <List>
-          <ListItem button component="a" href={travi.contact.website}>
-            <ListItemIcon><Home /></ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem button component="a" href="https://presentations.travi.org">
-            <ListItemIcon><Dvr /></ListItemIcon>
-            <ListItemText primary="Presentations" />
-          </ListItem>
-        </List>
-      </nav>
+      <List component="nav">
+        <ListItem button component="a" href={travi.contact.website}>
+          <ListItemIcon><Home /></ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button component="a" href="https://presentations.travi.org">
+          <ListItemIcon><Dvr /></ListItemIcon>
+          <ListItemText primary="Presentations" />
+        </ListItem>
+      </List>
     </Drawer>
   );
 }
