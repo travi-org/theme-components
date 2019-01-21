@@ -1,16 +1,27 @@
 import React from 'react';
 import {bool, func, shape, string} from 'prop-types';
-import {Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, withStyles} from '@material-ui/core';
+import {
+  Divider,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  SwipeableDrawer,
+  withStyles
+} from '@material-ui/core';
 import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
 import travi from 'travi';
 import {drawerWidth, styles} from './styles';
 
 export function NavigationDrawer({open, onToggle, classes}) {
   return (
-    <Drawer
+    <SwipeableDrawer
       variant="persistent"
       anchor="left"
       open={open}
+      onOpen={onToggle}
+      onClose={onToggle}
       css={{width: drawerWidth, flexShrink: 0}}
       classes={{paper: classes.paper}}
     >
@@ -28,7 +39,7 @@ export function NavigationDrawer({open, onToggle, classes}) {
           <ListItemText primary="Presentations" />
         </ListItem>
       </List>
-    </Drawer>
+    </SwipeableDrawer>
   );
 }
 

@@ -6,5 +6,5 @@ import Drawer from './presentational';
 
 storiesOf('Molecules/Navigation Drawer', module)
   .add('default', () => (
-    <Drawer open onToggle={action('navigation drawer closed')} />
+    <Drawer open onToggle={action('navigation drawer toggled')} />
   ));
