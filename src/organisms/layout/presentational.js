@@ -30,12 +30,12 @@ function styles(theme) {
 
 export function Layout({children, navigationOpen, onNavigationDrawerToggle, classes}) {
   return (
-    <MuiThemeProvider theme={traviTheme}>
+    <MuiThemeProvider theme={traviTheme} sheetsManager={new Map()}>
       <CssBaseline />
       <div css={{display: 'flex'}}>
         <Header navigationOpen={navigationOpen} onNavigationDrawerToggle={onNavigationDrawerToggle} />
         <NavigationDrawer open={navigationOpen} onToggle={onNavigationDrawerToggle} />
-        <main className={classNames(classes.content, {[classes.contentShift]: navigationOpen})}>
+        <main id="main-content" className={classNames(classes.content, {[classes.contentShift]: navigationOpen})}>
           <div className={classes.drawerHeader} />
           {children}
         </main>
