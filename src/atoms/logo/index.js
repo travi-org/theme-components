@@ -8,7 +8,7 @@ const styles = {
 
 export default function Logo() {
   return (
-    <span style={styles}>
+    <span css={styles}>
       Travi
     </span>
   );
