@@ -1,6 +1,7 @@
 import React from 'react';
 import {bool, func, node, shape, string} from 'prop-types';
-import {CssBaseline, MuiThemeProvider, withStyles} from '@material-ui/core';
+import {CssBaseline, withStyles} from '@material-ui/core';
+import {ThemeProvider} from '@material-ui/styles';
 import classNames from 'classnames';
 import Header from '../../molecules/header';
 import NavigationDrawer from '../../molecules/navigation';
@@ -30,7 +31,7 @@ function styles(theme) {
 
 export function Layout({children, navigationOpen, onNavigationDrawerToggle, classes}) {
   return (
-    <MuiThemeProvider theme={createTheme()} sheetsManager={new Map()}>
+    <ThemeProvider theme={createTheme()}>
       <CssBaseline />
       <div css={{display: 'flex'}}>
         <Header navigationOpen={navigationOpen} onNavigationDrawerToggle={onNavigationDrawerToggle} />
@@ -40,7 +41,7 @@ export function Layout({children, navigationOpen, onNavigationDrawerToggle, clas
           {children}
         </main>
       </div>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 }
 
