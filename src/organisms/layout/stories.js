@@ -12,7 +12,7 @@ storiesOf('Organisms/Layout', module)
     </LayoutPresentational>
   ))
   .add('w/ navigation open', () => (
-    <LayoutPresentational navigationOpen onNavigationDrawerToggle={action('navigation drawer closed')}>
+    <LayoutPresentational navigationOpen={true} onNavigationDrawerToggle={action('navigation drawer closed')}>
       Child Content
     </LayoutPresentational>
   ))
