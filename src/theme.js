@@ -1,8 +1,8 @@
-import {createMuiTheme} from '@material-ui/core';
+import {createMuiTheme, responsiveFontSizes} from '@material-ui/core';
 
 // palette generated at http://mcg.mbitson.com/ from #c80000
 export default function createTheme(colorScheme = 'light') {
-  return createMuiTheme({
+  return responsiveFontSizes(createMuiTheme({
     typography: {
       useNextVariants: true
     },
@@ -48,5 +48,5 @@ export default function createTheme(colorScheme = 'light') {
         main: '#666'
       }
     }
-  });
+  }));
 }
