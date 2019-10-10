@@ -3,6 +3,7 @@ import {bool, func, node, shape, string} from 'prop-types';
 import {CssBaseline, withStyles} from '@material-ui/core';
 import {ThemeProvider} from '@material-ui/styles';
 import classNames from 'classnames';
+import {useMediaQuery} from '../../../thirdparty-wrappers/material-ui';
 import Header from '../../molecules/header';
 import NavigationDrawer from '../../molecules/navigation';
 import createTheme from '../../theme';
@@ -30,8 +31,10 @@ function styles(theme) {
 }
 
 export function Layout({children, navigationOpen, onNavigationDrawerToggle, classes}) {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
   return (
-    <ThemeProvider theme={createTheme()}>
+    <ThemeProvider theme={createTheme(prefersDarkMode ? 'dark' : 'light')}>
       <CssBaseline />
       <div css={{display: 'flex'}}>
         <Header navigationOpen={navigationOpen} onNavigationDrawerToggle={onNavigationDrawerToggle} />
