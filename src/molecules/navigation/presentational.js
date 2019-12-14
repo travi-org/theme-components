@@ -12,17 +12,16 @@ import {
 } from '@material-ui/core';
 import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
 import travi from 'travi';
-import {drawerWidth, styles} from './styles';
+import {styles} from './styles';
 
 export function NavigationDrawer({open, onToggle, classes}) {
   return (
     <SwipeableDrawer
-      variant="persistent"
+      variant="temporary"
       anchor="left"
       open={open}
       onOpen={onToggle}
       onClose={onToggle}
-      css={{width: drawerWidth, flexShrink: 0}}
       classes={{paper: classes.paper}}
     >
       <div className={classes.drawerHeader}>

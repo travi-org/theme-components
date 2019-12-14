@@ -28,7 +28,7 @@ function styles(theme) {
 
 export function Header({navigationOpen, onNavigationDrawerToggle, classes}) {
   return (
-    <AppBar position="fixed" className={classNames(classes.appBar, {[classes.appBarShift]: navigationOpen})}>
+    <AppBar position="fixed" className={classNames(classes.appBar/* , {[classes.appBarShift]: navigationOpen} */)}>
       <Toolbar disableGutters={!navigationOpen}>
         {!navigationOpen && (
           <IconButton
