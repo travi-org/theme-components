@@ -39,7 +39,7 @@ export function Layout({children, navigationOpen, onNavigationDrawerToggle, clas
       <div css={{display: 'flex'}}>
         <Header navigationOpen={navigationOpen} onNavigationDrawerToggle={onNavigationDrawerToggle} />
         <NavigationDrawer open={navigationOpen} onToggle={onNavigationDrawerToggle} />
-        <main id="main-content" className={classNames(classes.content, {[classes.contentShift]: navigationOpen})}>
+        <main id="main-content" className={classNames(classes.content/* , {[classes.contentShift]: navigationOpen} */)}>
           <div className={classes.drawerHeader} />
           {children}
         </main>
