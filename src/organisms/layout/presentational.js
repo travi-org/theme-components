@@ -7,7 +7,7 @@ import {useMediaQuery} from '../../../thirdparty-wrappers/material-ui';
 import Header from '../../molecules/header';
 import NavigationDrawer from '../../molecules/navigation';
 import createTheme from '../../theme';
-import {drawerWidth, styles as drawerStyles} from '../../molecules/navigation/styles';
+import {styles as drawerStyles} from '../../molecules/navigation/styles';
 
 function styles(theme) {
   return ({
@@ -18,13 +18,13 @@ function styles(theme) {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       }),
-      marginLeft: -drawerWidth
-    },
-    contentShift: {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen
-      }),
+      //   marginLeft: -drawerWidth
+      // },
+      // contentShift: {
+      //   transition: theme.transitions.create('margin', {
+      //     easing: theme.transitions.easing.easeOut,
+      //     duration: theme.transitions.duration.enteringScreen
+      //   }),
       marginLeft: 0
     }
   });
