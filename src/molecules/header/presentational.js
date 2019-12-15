@@ -1,5 +1,5 @@
 import React from 'react';
-import {bool, func, shape, string} from 'prop-types';
+import {func, shape, string} from 'prop-types';
 import {AppBar, IconButton, Toolbar, Typography, withStyles} from '@material-ui/core';
 import {Menu as MenuIcon} from '@material-ui/icons';
 import travi from 'travi';
@@ -26,20 +26,18 @@ function styles(theme) {
   });
 }
 
-export function Header({navigationOpen, onNavigationDrawerToggle, classes}) {
+export function Header({onNavigationDrawerToggle, classes}) {
   return (
     <AppBar position="fixed" className={classNames(classes.appBar/* , {[classes.appBarShift]: navigationOpen} */)}>
-      <Toolbar disableGutters={!navigationOpen}>
-        {!navigationOpen && (
-          <IconButton
-            color="inherit"
-            aria-label="Open navigation drawer"
-            onClick={onNavigationDrawerToggle}
-            css={{marginLeft: 12, marginRight: 20}}
-          >
-            <MenuIcon />
-          </IconButton>
-        )}
+      <Toolbar disableGutters>
+        <IconButton
+          color="inherit"
+          aria-label="Open navigation drawer"
+          onClick={onNavigationDrawerToggle}
+          css={{marginLeft: 12, marginRight: 20}}
+        >
+          <MenuIcon />
+        </IconButton>
         <Typography component="h1" variant="h5">
           <a href={travi.contact.website} css={{textDecoration: 'none'}}>
             <Logo />
@@ -52,7 +50,6 @@ export function Header({navigationOpen, onNavigationDrawerToggle, classes}) {
 
 Header.displayName = 'Header';
 Header.propTypes = {
-  navigationOpen: bool,
   onNavigationDrawerToggle: func.isRequired,
   classes: shape({appBar: string, appBarShift: string})
 };

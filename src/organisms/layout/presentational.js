@@ -37,7 +37,7 @@ export function Layout({children, navigationOpen, onNavigationDrawerToggle, clas
     <ThemeProvider theme={createTheme(prefersDarkMode ? 'dark' : 'light')}>
       <CssBaseline />
       <div css={{display: 'flex'}}>
-        <Header navigationOpen={navigationOpen} onNavigationDrawerToggle={onNavigationDrawerToggle} />
+        <Header onNavigationDrawerToggle={onNavigationDrawerToggle} />
         <NavigationDrawer open={navigationOpen} onToggle={onNavigationDrawerToggle} />
         <main id="main-content" className={classNames(classes.content/* , {[classes.contentShift]: navigationOpen} */)}>
           <div className={classes.drawerHeader} />
