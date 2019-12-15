@@ -1,34 +1,13 @@
 import React from 'react';
-import {func, shape, string} from 'prop-types';
-import {AppBar, IconButton, Toolbar, Typography, withStyles} from '@material-ui/core';
+import {func} from 'prop-types';
+import {AppBar, IconButton, Toolbar, Typography} from '@material-ui/core';
 import {Menu as MenuIcon} from '@material-ui/icons';
 import travi from 'travi';
-import classNames from 'classnames';
 import Logo from '../../atoms/logo';
-import {drawerWidth} from '../navigation/styles';
 
-function styles(theme) {
-  return ({
-    appBar: {
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen
-      })
-    },
-    appBarShift: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen
-      })
-    }
-  });
-}
-
-export function Header({onNavigationDrawerToggle, classes}) {
+export default function Header({onNavigationDrawerToggle}) {
   return (
-    <AppBar position="fixed" className={classNames(classes.appBar/* , {[classes.appBarShift]: navigationOpen} */)}>
+    <AppBar position="fixed">
       <Toolbar disableGutters>
         <IconButton
           color="inherit"
@@ -50,9 +29,5 @@ export function Header({onNavigationDrawerToggle, classes}) {
 
 Header.displayName = 'Header';
 Header.propTypes = {
-  onNavigationDrawerToggle: func.isRequired,
-  classes: shape({appBar: string, appBarShift: string})
+  onNavigationDrawerToggle: func.isRequired
 };
-Header.defaultProps = {classes: {}};
-
-export default withStyles(styles, {withTheme: true})(Header);

@@ -5,7 +5,7 @@ import {assert} from 'chai';
 import any from '@travi/any';
 import sinon from 'sinon';
 import * as wrappedMaterial from '../../../thirdparty-wrappers/material-ui';
-import {Layout} from './presentational';
+import Layout from './presentational';
 import Header from '../../molecules/header';
 import NavigationDrawer from '../../molecules/navigation';
 import * as themeCreator from '../../theme';

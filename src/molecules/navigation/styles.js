@@ -1,9 +1,7 @@
 /* eslint import/prefer-default-export: off */
-export const drawerWidth = 240;
-
 export function styles(theme) {
   return ({
-    paper: {width: drawerWidth},
+    paper: {width: 240},
     drawerHeader: {
       display: 'flex',
       alignItems: 'center',

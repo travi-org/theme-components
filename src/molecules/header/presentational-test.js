@@ -3,7 +3,7 @@ import {AppBar, IconButton, Toolbar, Typography} from '@material-ui/core';
 import {Menu as MenuIcon} from '@material-ui/icons';
 import {assert} from 'chai';
 import {shallow} from 'enzyme';
-import {Header} from './presentational';
+import Header from './presentational';
 
 suite('header', () => {
   test('that the app-bar from material-ui is used', () => {
