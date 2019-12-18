@@ -1,6 +1,6 @@
 import React from 'react';
 import {bool, func, node} from 'prop-types';
-import {CssBaseline} from '@material-ui/core';
+import {CssBaseline, Toolbar} from '@material-ui/core';
 import {ThemeProvider} from '@material-ui/styles';
 import {useMediaQuery} from '../../../thirdparty-wrappers/material-ui';
 import Header from '../../molecules/header';
@@ -16,7 +16,8 @@ export default function Layout({children, navigationOpen, onNavigationDrawerTogg
       <div css={{display: 'flex'}}>
         <Header onNavigationDrawerToggle={onNavigationDrawerToggle} />
         <NavigationDrawer open={navigationOpen} onToggle={onNavigationDrawerToggle} />
-        <main id="main-content" css={{marginLeft: 0}}>
+        <main id="main-content" css={{marginLeft: 0, flexGrow: 1}}>
+          <Toolbar />
           {children}
         </main>
       </div>
