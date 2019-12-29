@@ -1,4 +1,6 @@
 import {createMuiTheme, responsiveFontSizes} from '@material-ui/core';
+import {rgb} from 'polished';
+import brand from '@travi/brand';
 
 // palette generated at http://mcg.mbitson.com/ from #c80000
 export default function createTheme(colorScheme = 'light') {
@@ -9,7 +11,7 @@ export default function createTheme(colorScheme = 'light') {
     palette: {
       type: colorScheme,
       primary: {
-        main: '#c80000'
+        main: rgb(brand.colors['brand-palette']['dark-red'])
         // 50: '#f8e0e0',
         // 100: '#efb3b3',
         // 200: '#e48080',

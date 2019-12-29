@@ -1,7 +1,8 @@
 import React from 'react';
+import brand from '@travi/brand';
 
 const styles = {
-  fontFamily: 'Permanent Marker,Franklin Gothic Demi Cond,sans-serif',
+  fontFamily: `${brand.typefaces.logo.name}, ${brand.typefaces.logo.fallback}`,
   color: '#fff',
   textShadow: '5px 5px 5px #111'
 };
