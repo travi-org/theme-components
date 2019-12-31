@@ -1,7 +1,6 @@
 import React from 'react';
 import {bool, func, node} from 'prop-types';
-import {CssBaseline, Toolbar} from '@material-ui/core';
-import {ThemeProvider} from '@material-ui/styles';
+import {CssBaseline, Toolbar, ThemeProvider} from '@material-ui/core';
 import {useMediaQuery} from '../../../thirdparty-wrappers/material-ui';
 import Header from '../../molecules/header';
 import NavigationDrawer from '../../molecules/navigation';
