@@ -1,0 +1,6 @@
+_extends: .github
+repository:
+  name: theme-components
+  description: React components that implement the shared theme for Travi.org sites
+  homepage: 'https://npm.im/@travi/theme-components'
+  private: false
