@@ -1,0 +1,4 @@
+{"presets": [
+  ["@travi", {"targets": {"browser": true}, "react": true, "modules": false}],
+  "@emotion/babel-preset-css-prop"
+]}

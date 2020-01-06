@@ -1,2 +1,4 @@
 /lib/
 /coverage/
+/storybook-static/
+/cypress/

@@ -1,1 +1,1 @@
-{"presets":["@travi"],"ignore":["./lib/"]}
+{"presets":[["@travi", {"react": true}]],"ignore":["./lib/"]}

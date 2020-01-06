@@ -1,1 +1,1 @@
-{"reporter":["lcov","text-summary","html"],"exclude":["src/**/*-test.js","test/","thirdparty-wrappers/","vendor/"]}
+{"reporter":["lcov","text-summary","html"],"exclude":["src/**/*-test.js","test/","thirdparty-wrappers/","vendor/","src/theme.js","**/styles.js"]}
