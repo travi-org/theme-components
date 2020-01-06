@@ -2,3 +2,7 @@ extends:
   - '@travi'
   - '@travi/mocha'
   - '@travi/react'
+
+overrides:
+  - files: 'test/integration/*-spec.js'
+    extends: '@travi/cypress'

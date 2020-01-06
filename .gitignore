@@ -1,6 +1,8 @@
 /node_modules/
 /lib/
 /storybook-static/
+/cypress/videos/
+/cypress/fixtures/
 /coverage/
 /.nyc_output/
 
