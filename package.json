@@ -23,6 +23,7 @@
     "lint:md": "remark . --frail",
     "lint:sensitive": "ban",
     "lint:travis": "travis-lint .travis.yml",
+    "lint:peer": "npm ls >/dev/null",
     "clean": "rimraf ./lib",
     "prebuild": "run-s clean",
     "build": "npm-run-all --print-label --parallel build:*",
@@ -36,8 +37,7 @@
     "test:integration": "start-server-and-test 'npm start -- --quiet' http://localhost:8888 'npm run cypress:run -- ${CYPRESS_RECORD_KEY:+--record}'",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint:peer": "npm ls >/dev/null"
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
@@ -81,7 +81,7 @@
     "rimraf": "^3.0.0",
     "rollup": "^2.0.2",
     "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "sinon": "^9.0.0",
     "start-server-and-test": "^1.10.6",
