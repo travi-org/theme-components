@@ -10,7 +10,7 @@ import {
   SwipeableDrawer,
   withStyles
 } from '@material-ui/core';
-import {ChevronLeft, Dvr, Home} from '@material-ui/icons';
+import {ChevronLeft, Dvr as PresentationsIcon, Home, MailOutline as ContactIcon} from '@material-ui/icons';
 import travi from 'travi';
 import {styles} from './styles';
 
@@ -34,8 +34,12 @@ export function NavigationDrawer({open, onToggle, classes}) {
           <ListItemText primary="Home" />
         </ListItem>
         <ListItem button component="a" href="https://presentations.travi.org">
-          <ListItemIcon><Dvr /></ListItemIcon>
+          <ListItemIcon><PresentationsIcon /></ListItemIcon>
           <ListItemText primary="Presentations" />
+        </ListItem>
+        <ListItem button component="a" href="https://matt.travi.org/contact">
+          <ListItemIcon><ContactIcon /></ListItemIcon>
+          <ListItemText primary="Contact" />
         </ListItem>
       </List>
     </SwipeableDrawer>
