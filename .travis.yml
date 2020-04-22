@@ -1,7 +1,11 @@
-version: ~> 1.0
+version: "~> 1.0"
 notifications:
   email: false
 import:
-  - source: 'form8ion/.travis-ci:node.yml'
-  - source: 'travi-org/.travis-ci:authenticated-semantic-release.yml'
-after_success: 'npm run coverage:report'
+- source: form8ion/.travis-ci:node.yml
+- source: form8ion/.travis-ci:cypress.yml
+- source: travi-org/.travis-ci:authenticated-semantic-release.yml
+after_success: npm run coverage:report
+env:
+  global:
+    secure: Oqw10A8w3LVF7GJZl0WUgRwC84wv0Vt6SdNGnoJ/ViYd7YXPLS3D3lS8Ccc3OnZDMWeZaNPp+c08iyyRa9Qs4+gIG4FQE12smArwsUjPHxPWkYGnY+j6+Pyr7uh+6bOWKsvhyg96zXRVaIftUow3vTJ2QaP+b7chSn2/CkY+7y/RhF9+AywqnvavgYfpSt1/yKO3vSAvYEOxf2TP8yjVNl6W39ikq2yNAm3rVyEahrtRnwWNh8L4jsyz5YTxdoRKncsdm9XJEmgrg5fsLpogrMJMXfFEw/3ZMNnLwFuCzj8LjCvcHRkGQfc5Jbs/SyowVgfN5j4dKb3TjU15M0dFxdcX9dTHvRmCR1uN4GQtAq2iiWo3Cne02TrvVCIcEP0RiWYq/MN3ukJX5G1q0f13fcwYy9JROGySEIgwhYAsjFSBPn+IvDdocunzMvW5Oxn9Kxpcq/wIKfiMUhlu+LLwb/GPQxGKvoGI1+b9QPfjpBbMySSXUVxwNPG4Z69SQ0lIHxcsw7yLu/NMpGXUsGsBrbPTeUYhp/IZkFZ+9f2NXelcQVN4hhFHDerbdVcHTBesK7Z7ug38+FThFgLA6cMUJl+F20rJIdZZq9gZ8TAjqz2LHIUWY7zT1WUJScK0alsXIVKyn3G5LCDK1RcnEPLSA6to6Yj98LjycmbyZr8vY+A=
