@@ -32,7 +32,6 @@ $ npm install @travi/travi.org-theme-components --save-prod
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
-[![Greenkeeper badge][greenkeeper-badge]][greenkeeper-link]
 [![Renovate][renovate-badge]][renovate-link]
 
 <!--contribution-badges end -->
@@ -81,10 +80,6 @@ $ npm test
 [PRs-link]: http://makeapullrequest.com
 
 [PRs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
-
-[greenkeeper-badge]: https://badges.greenkeeper.io/travi-org/theme-components.svg
-
-[greenkeeper-link]: https://greenkeeper.io/
 
 [renovate-link]: https://renovatebot.com
 
