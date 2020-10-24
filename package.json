@@ -58,7 +58,7 @@
     "@testing-library/cypress": "7.0.1",
     "@travi/any": "2.0.13",
     "@travi/babel-preset": "3.0.30",
-    "@travi/eslint-config": "1.0.50",
+    "@travi/eslint-config": "1.0.51",
     "@travi/eslint-config-cypress": "1.0.22",
     "@travi/eslint-config-mocha": "1.0.8",
     "@travi/eslint-config-react": "1.0.50",
