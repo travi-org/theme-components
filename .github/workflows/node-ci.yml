@@ -27,6 +27,8 @@ jobs:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - uses: bahmutov/npm-install@v1
       - run: npm test
+        env:
+          CYPRESS_RECORD_KEY: '${{ secrets.CYPRESS_RECORD_KEY }}'
       - name: Upload coverage data to Codecov
         run: 'npm run coverage:report'
   release:
