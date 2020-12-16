@@ -54,7 +54,7 @@
     "@emotion/babel-preset-css-prop": "10.2.1",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/react": "5.3.18",
-    "@testing-library/cypress": "7.0.2",
+    "@testing-library/cypress": "7.0.3",
     "@travi/any": "2.0.15",
     "@travi/babel-preset": "3.0.38",
     "@travi/eslint-config": "1.0.56",
