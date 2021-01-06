@@ -82,7 +82,7 @@
     "rollup-plugin-auto-external": "2.0.0",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-node-resolve": "5.2.0",
-    "sinon": "9.2.2",
+    "sinon": "9.2.3",
     "start-server-and-test": "1.11.7"
   }
 }
