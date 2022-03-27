@@ -28,7 +28,7 @@
     "build": "npm-run-all --print-label --parallel build:*",
     "build:js": "rollup --config",
     "watch": "run-s 'build:js -- --watch'",
-    "prepack": "run-s build",
+    "prepack": "run-s build:js",
     "start": "start-storybook --port 8888 --ci",
     "build:storybook": "build-storybook --quiet",
     "test:unit": "nyc run-s test:unit:base",
