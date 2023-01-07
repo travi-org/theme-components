@@ -36,6 +36,7 @@
     "test:integration": "start-server-and-test 'npm start -- --quiet' http://localhost:8888 'npm run cypress:run -- ${CYPRESS_RECORD_KEY:+--record}'",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "prepare": "husky install",
     "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
