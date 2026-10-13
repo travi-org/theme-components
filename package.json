@@ -39,7 +39,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.28",
+    "@emotion/core": "^11.0.0",
     "@material-ui/core": "^4.8.2",
     "@material-ui/icons": "^4.5.1",
     "@travi/brand": "^1.0.0",
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@babel/register": "7.17.7",
-    "@emotion/babel-preset-css-prop": "10.2.1",
+    "@emotion/babel-preset-css-prop": "11.12.0",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/react": "5.3.18",
     "@testing-library/cypress": "7.0.7",
