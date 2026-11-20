@@ -5,6 +5,6 @@ name: Release
       - alpha
 jobs:
   release:
-    uses: form8ion/.github/.github/workflows/release-package-semantic-release-19.yml@master
+    uses: form8ion/.github/.github/workflows/release-package-semantic-release-19.yml@bcd36ebc2eb85f39c8e65ceafbec81c4999c1797 # master
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
